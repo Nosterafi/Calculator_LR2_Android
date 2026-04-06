@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Цвета -->
+
+    <!-- Размеры -->
+    <dimen name="calculator_in_out_textSize">25sp</dimen>
+    <dimen name="calculator_buttons_textSize">50sp</dimen>
+    <integer name="calculator_max_num_len">9</integer>
+
+    <!-- Подписи -->
+    <string name="calculator_exit_button_signature"><u>Выход</u></string>
+    <string name="calculator_first_arg_signature">Число A:</string>
+    <string name="calculator_second_arg_signature">Число B:</string>
+    <string name="calculator_result_signature">Результат:</string>
+    <string name="calculator_hint_to_first_arg">Введите число A</string>
+    <string name="calculator_hint_to_second_arg">Введите число B</string>
+    <string name="calculator_hint_result">Результат</string>
+    <string name="calculator_but_signature_0_0">+</string>
+    <string name="calculator_but_signature_0_1">-</string>
+    <string name="calculator_but_signature_1_0">*</string>
+    <string name="calculator_but_signature_1_1">/</string>
+    <string name="calculator_but_signature_2_0">C</string>
+    <string name="calculator_but_signature_2_1">=</string>
+    <string name="calculator_init_operation">+</string>
+</resources>

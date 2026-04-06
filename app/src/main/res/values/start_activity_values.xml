@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Цвета -->
+
+    <!-- Размеры -->
+    <dimen name="start_buttons_text_size">20sp</dimen>
+
+    <!-- Подписи -->
+    <string name="start_calculator_button_signature">Калькулятор</string>
+    <string name="start_chart_button_signature">График</string>
+    <string name="start_exit_button_signature">Выход</string>
+</resources>

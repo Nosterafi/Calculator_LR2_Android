@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/start_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_rowWeight="1"
+    android:layout_columnWeight="1"
+    android:background="@color/general_main_backcolor"
+    android:minHeight="500dp"
+    tools:context=".CalculatorActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:background="@color/general_theme_color"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center_vertical"
+            android:text="@string/app_name"
+            android:textColor="@color/general_main_backcolor"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/general_main_backcolor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/numsLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/general_main_backcolor"
+            android:minHeight="241dp"
+            app:layout_constraintEnd_toStartOf="@+id/keyboardLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/aLinearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/general_main_backcolor"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/calculator_first_arg_signature"
+                    android:textAlignment="center"
+                    android:textColor="@color/general_black"
+                    android:textSize="25sp" />
+
+                <EditText
+                    android:id="@+id/aEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:ems="10"
+                    android:hint="@string/calculator_hint_to_first_arg"
+                    android:importantForAutofill="no"
+                    android:inputType="number|numberDecimal|numberSigned"
+                    android:maxWidth="200dp"
+                    android:maxLength="@integer/calculator_max_num_len"
+                    android:textAllCaps="false"
+                    android:textColor="@color/general_theme_color"
+                    android:textColorHint="#78909C"
+                    android:textSize="@dimen/calculator_in_out_textSize"
+                    tools:ignore="VisualLintBounds" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bLinearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/general_main_backcolor"
+                android:baselineAligned="false"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/signView">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/calculator_second_arg_signature"
+                    android:textAlignment="center"
+                    android:textColor="@color/general_black"
+                    android:textSize="25sp" />
+
+                <EditText
+                    android:id="@+id/bEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:ems="10"
+                    android:hint="@string/calculator_hint_to_second_arg"
+                    android:importantForAutofill="no"
+                    android:inputType="number|numberDecimal|numberSigned"
+                    android:maxWidth="200dp"
+                    android:maxLength="@integer/calculator_max_num_len"
+                    android:textAllCaps="false"
+                    android:textColor="@color/general_theme_color"
+                    android:textColorHint="#78909C"
+                    android:textSize="@dimen/calculator_in_out_textSize"
+                    tools:ignore="VisualLintBounds" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/resultLinearLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/general_main_backcolor"
+                android:baselineAligned="false"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/calculator_result_signature"
+                    android:textAlignment="center"
+                    android:textColor="@color/general_black"
+                    android:textSize="25sp" />
+
+                <EditText
+                    android:id="@+id/resultEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:hint="@string/calculator_hint_result"
+                    android:importantForAutofill="no"
+                    android:inputType="number|numberDecimal|numberSigned"
+                    android:maxWidth="200dp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/general_theme_color"
+                    android:textColorHint="#78909C"
+                    android:textSize="@dimen/calculator_in_out_textSize"
+                    tools:ignore="VisualLintBounds" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/signView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:layout_marginEnd="80dp"
+                android:background="#E7E7E7"
+                android:gravity="center"
+                android:text="@string/calculator_init_operation"
+                android:textAlignment="gravity"
+                android:textColor="@color/general_theme_color"
+                android:textSize="34sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/aLinearLayout" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TableLayout
+            android:id="@+id/keyboardLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:background="@color/general_surface_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:minWidth="300dp">
+
+                <Button
+                    android:id="@+id/button29"
+                    style="?android:attr/buttonBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/cardview_shadow_end_color"
+                    android:onClick="setOperation"
+                    android:text="@string/calculator_but_signature_0_0"
+                    android:textColor="@color/general_theme_color"
+                    android:textSize="@dimen/calculator_buttons_textSize"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <Button
+                    android:id="@+id/button30"
+                    style="?android:attr/buttonBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/cardview_shadow_end_color"
+                    android:onClick="setOperation"
+                    android:text="@string/calculator_but_signature_0_1"
+                    android:textColor="@color/general_theme_color"
+                    android:textSize="@dimen/calculator_buttons_textSize"
+                    android:textStyle="normal" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/button32"
+                    style="?android:attr/buttonBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/cardview_shadow_end_color"
+                    android:onClick="setOperation"
+                    android:text="@string/calculator_but_signature_1_0"
+                    android:textColor="@color/general_theme_color"
+                    android:textSize="@dimen/calculator_buttons_textSize" />
+
+                <Button
+                    android:id="@+id/button33"
+                    style="?android:attr/buttonBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/cardview_shadow_end_color"
+                    android:onClick="setOperation"
+                    android:text="@string/calculator_but_signature_1_1"
+                    android:textColor="@color/general_theme_color"
+                    android:textSize="@dimen/calculator_buttons_textSize" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/button36"
+                    style="?android:attr/buttonBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:backgroundTint="@color/cardview_shadow_end_color"
+                    android:gravity="center"
+                    android:onClick="clearNums"
+                    android:text="@string/calculator_but_signature_2_0"
+                    android:textColor="@color/general_theme_color"
+                    android:textSize="@dimen/calculator_buttons_textSize" />
+
+                <Button
+                    android:id="@+id/button37"
+                    style="?android:attr/buttonBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:backgroundTint="@color/cardview_shadow_end_color"
+                    android:gravity="center"
+                    android:onClick="solve"
+                    android:text="@string/calculator_but_signature_2_1"
+                    android:textColor="@color/general_theme_color"
+                    android:textSize="@dimen/calculator_buttons_textSize" />
+            </TableRow>
+
+        </TableLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

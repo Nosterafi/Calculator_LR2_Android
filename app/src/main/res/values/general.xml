@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Calculator" parent="Theme.Material3.DayNight.NoActionBar">
+    </style>
+    <style name="Theme.Calculator" parent="Base.Theme.Calculator" />
+
+    <!-- Общие подписи -->
+    <string name="app_name">Калькулятор ЛР2</string>
+
+    <!-- Общие цвета -->
+    <color name="general_black">#FF000000</color>
+    <color name="general_main_backcolor">#FFFFFFFF</color>
+    <color name="general_theme_color">#3F51B5</color>
+    <color name="general_surface_color">#E7E7E7</color>
+</resources>
