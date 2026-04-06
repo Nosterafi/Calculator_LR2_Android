@@ -14,7 +14,7 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
-        android:layout_height="45dp"
+        android:layout_height="wrap_content"
         android:background="@color/general_theme_color"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,11 +28,24 @@
             android:layout_height="match_parent"
             android:layout_marginStart="8dp"
             android:layout_weight="1"
+            android:background="@color/cardview_shadow_end_color"
             android:fontFamily="sans-serif-medium"
             android:gravity="center_vertical"
             android:text="@string/app_name"
             android:textColor="@color/general_main_backcolor"
             android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/exitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/general_theme_color"
+            android:gravity="center_vertical|end"
+            android:onClick="closeActivity"
+            android:text="@string/calculator_exit_button_signature"
+            android:textAllCaps="false"
+            android:textColor="@color/general_main_backcolor"
+            android:textSize="16sp" />
 
     </LinearLayout>
 
@@ -45,8 +58,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/numsLinearLayout"
