@@ -2,7 +2,6 @@ package com.example.calculator;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -33,18 +32,6 @@ public class CalculatorActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
-        // Проверка разрешения экрана устройства (требуется разрешение не ниже HD)
-        DisplayMetrics display = getResources().getDisplayMetrics();
-        boolean stop = true;
-        if ((display.heightPixels >= 1920 && display.widthPixels >= 1080) ||
-                (display.heightPixels >= 1080 && display.widthPixels >= 1920)) {
-            stop = false;
-        }
-        if (stop) {
-            android.os.Process.killProcess(android.os.Process.myPid());
-            System.exit(1);
-        }
 
         viewModel = new ViewModelProvider(this).get(CalculatorModel.class);
         setElements();
